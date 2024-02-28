@@ -1,11 +1,11 @@
 
 parola = prompt('inserisci')
-
+const output = document.getElementById('output')
 
 if (palindromo(parola) === true) {
-  console.log('La parola è palindroma');
+  const output = document.getElementById('output').innerHTML += `La parola è palindroma` ;
 }else{
-  console.log('La parola non è palindroma');
+  const output = document.getElementById('output').innerHTML += `La parola non  è palindroma` ;
 
 }
 
