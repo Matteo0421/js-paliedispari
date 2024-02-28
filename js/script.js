@@ -55,11 +55,16 @@ const somma = numPc + numGiocatore;
 let risultato, messaggio;
 
 
-if(verificaPariDispari(somma, pariDispari)){
+if(verificaPari(somma, pariDispari)){
   pariDispari = prompt('Scrivi "pari" oppure "dispari"')
 
   messaggio = 'Vince il giocatore'
-}else{
+}else if (verificaDispari(somma, pariDispari)) {
+  pariDispari = prompt('Scrivi "pari" oppure "dispari"')
+
+  messaggio = 'Vince il giocatore'
+}
+else{
   messaggio = 'Vince il pc'
 }
 
@@ -74,8 +79,12 @@ function numeroPc (min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
-function verificaPariDispari(somma, pariDispari) {
-  return (somma % 2 === 0 && pariDispari === 'pari') || (somma % 2 !== 0 && pariDispari === 'dispari');
+function verificaPari(somma, pariDispari) {
+  return (somma % 2 === 0 && pariDispari === 'pari') ;
 };
+function verificaDispari(somma, pariDispari) {
+  return  (somma % 2 !== 0 && pariDispari === 'dispari');
+};
+
 
 console.log(prompt);
