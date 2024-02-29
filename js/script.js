@@ -56,11 +56,9 @@ let risultato, messaggio;
 
 
 if(verificaPari(somma, pariDispari)){
-  pariDispari = prompt('Scrivi "pari" oppure "dispari"')
 
   messaggio = 'Vince il giocatore'
 }else if (verificaDispari(somma, pariDispari)) {
-  pariDispari = prompt('Scrivi "pari" oppure "dispari"')
 
   messaggio = 'Vince il giocatore'
 }
